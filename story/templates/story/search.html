@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+<style>
+    .container{
+    display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 20px;
+  display: flex;
+  justify-content: center;
+  }
+</style>
+{% block title %}
+<title>search story</title>
+{% endblock%}
+
+
+{% block body %}
+<div class="container" >
+    <h1>This is search page</h1>
+    {% if query %}
+    <h3>{% with results.count as total_results %}
+         Found {{total_results}} results
+        {% endwith %}
+    </h3>
+   <br><br> <div class="container" id="listings">
+        {% for x in results %}
+        <div class="card mb-6" style="max-width: 410px; height: fit-content;" id="card-listings">
+            <div class="row no-gutters">
+              <div class="col-md-10">
+                <a class="img69" href="{{x.get_absolute_url}}"><img src="{{x.des}}" class="card-img" alt="..."></a>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{x.title}}</h5>
+                  <br><a href="{{x.get_absolute_url}}"><button class="btn btn-outline-success">Watch Now</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    {% empty %}
+    <h3>There is no query</h3>
+    {% endfor %}
+    {% else %}
+    <h3>Please search for a right query ,you don't write any query</h3>
+    {% endif %}
+
+
+</div>
+{% endblock %}

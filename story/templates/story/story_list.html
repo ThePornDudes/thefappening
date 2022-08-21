@@ -1,0 +1,410 @@
+<style>
+    body {font-family: Arial;}
+    
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 2px solid #ccc;
+      background-color: #f1f1f1; 
+      display: flex;
+      justify-content: center;
+     
+    }
+    
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 18px 24px;
+      transition: 0.3s;
+      font-size: 19px;
+    }
+    
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+    
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+    
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+    
+    div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 16.66666%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container{
+    display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 20px;
+  display: flex;
+  justify-content: center;
+  }
+
+
+.controls-top{
+    width: 50px;
+  }
+
+    </style>
+{% extends 'base.html' %}
+
+{% block title %}
+<title>thefappening</title>
+{% endblock%}
+{% block body %}
+
+<div class="container my-4">
+
+    <hr class="my-4">
+
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+      <!--Controls-->
+      <center>
+      <div class="controls-top">
+        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa-1x fa-solid fa-circle-arrow-left"></i></a>
+        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa-1x fa-solid fa-circle-arrow-right"></i></a>
+      </div>
+      </center>
+      <!--/.Controls-->
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+        <li data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+        1/3
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.First slide-->
+
+        <!--Second slide-->
+        <div class="carousel-item">
+         2/3
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.Second slide-->
+
+        <!--Third slide-->
+        <div class="carousel-item">
+         3/3
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a class="btn btn-primary">Button</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--/.Third slide-->
+
+      </div>
+      <!--/.Slides-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+
+  </div>
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'London')">Pornstar</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Categories</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Close <i class="fa-solid fa-compress"></i></button>
+  </div>
+  
+  <div id="London" class="tabcontent">
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="https://image-service-ht.project1content.com/7e3/382/82c/209/417/3a8/7b8/6be/e78/d99/b2/model/profile_001.jpg?width=600&aspectRatio=5x8&imageVersion=1654789360&outputImageType=webp" alt="Cinque Terre" width="400" height="500">
+          </a>
+          <div class="desc">Abella Danger</div>
+        </div>
+      </div>
+      
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_forest.jpg">
+            <img src="https://image-service-ht.project1content.com/397/682/d11/20f/462/4a1/a76/ece/03c/e64/10/model/profile_001.jpg?width=600&aspectRatio=5x8&imageVersion=1654789360&outputImageType=webp" alt="Forest" width="400" height="500">
+          </a>
+          <div class="desc">Peta Jensen</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_lights.jpg">
+            <img src="https://image-service-ht.project1content.com/aae/a85/a8e/4ab/492/da1/e34/200/1a1/a3e/51/model/profile_001.jpg?width=600&aspectRatio=5x8&imageVersion=1654789360&outputImageType=webp" alt="Northern Lights" width="400" height="500">
+          </a>
+          <div class="desc">Adriana Chechik</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_mountains.jpg">
+            <img src="https://image-service-ht.project1content.com/c1b/da2/7c7/8ee/428/2b2/9ab/171/620/7ca/3a/model/profile_001.jpg?width=600&aspectRatio=5x8&imageVersion=1654789360&outputImageType=webp" alt="Mountains" width="400" height="500">
+          </a>
+          <div class="desc">Ava Addams</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="https://image-service-ht.project1content.com/604/368/d72/d07/489/298/d44/df5/06e/248/67/model/profile_001.jpg?width=600&aspectRatio=5x8&imageVersion=1658935420&outputImageType=webp" alt="Cinque Terre" width="400" height="500">
+          </a>
+          <div class="desc">Lena Paul</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="https://image-service-ht.project1content.com/782/e5e/fc3/6ff/406/bab/f6c/83b/1ec/70d/9e/model/profile_001.jpg?width=600&aspectRatio=5x8&imageVersion=1654789360&outputImageType=webp" alt="Cinque Terre" width="400" height="500">
+          </a>
+          <div class="desc">Lana Rhoades</div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+  </div>
+  
+  <div id="Paris" class="tabcontent">
+  </div>
+  
+  <div id="Tokyo" class="tabcontent">
+    
+  </div>
+  
+  <script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+        
+       
+        <br><br><div class="container" id="listings">
+            {% for x in story %}
+            <div class="card mb-6" style="max-width: 410px; height: fit-content;" id="card-listings">
+                <div class="row no-gutters">
+                  <div class="col-md-10">
+                    <a class="img69" href="{{x.get_absolute_url}}"><img src="{{x.des}}" class="card-img" alt="..."></a>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{x.title}}</h5>
+                      <br><a href="{{x.get_absolute_url}}"><button class="btn btn-outline-success">Watch Now</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+        </div>
+
+        <hr>
+        <h3 class="text-center">{% include 'pagination.html' with page=story %}</h3>
+         <hr>
+         <h3>Recent three story:</h3> 
+         {% for x in recent_story %}
+         <a href="{{recent_story.get_absolute_url}}">
+            <h6>{{x.title}}</h6>
+        </a>
+         {% endfor %}
+      
+
+    </div>
+</div>
+
+{% endblock %}
